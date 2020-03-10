@@ -26,12 +26,15 @@ def _process_table(table):
         date = datetime.date(2020, month, day)
         yield (date.isoformat(), int(tds[1].get_text()), int(tds[2].get_text()))
 
-def main():
+def get_records():
   soup = BeautifulSoup(_get_cdc_content(), features="lxml")
   tables = soup.find_all('table')
   last_table = tables[-1]
+  return _process_table(last_table)
+
+def main():
   writer = csv.writer(sys.stdout)
-  for record in  _process_table(last_table):
+  for record in get_records():
     writer.writerow(record)
     
 if __name__ == '__main__':

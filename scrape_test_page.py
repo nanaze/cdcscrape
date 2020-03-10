@@ -34,9 +34,5 @@ def main():
   for record in  _process_table(last_table):
     writer.writerow(record)
     
-  
-  
-  
-  
-
-main()
+if __name__ == '__main__':
+  main()

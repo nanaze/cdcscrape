@@ -1,8 +1,9 @@
-from bs4 import BeautifulSoup
-import urllib
 import csv
 import datetime
 import sys
+import urllib
+
+from bs4 import BeautifulSoup
 
 _CDC_PAGE = 'https://www.cdc.gov/coronavirus/2019-ncov/testing-in-us.html'
 

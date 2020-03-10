@@ -1,3 +1,7 @@
+"""Scrapes the data table for the CDC's tests in US page.
+
+Writes CSV version of the data to standard out."""
+
 import csv
 import datetime
 import sys
